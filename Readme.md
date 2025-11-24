@@ -82,22 +82,31 @@ __only for boundary and initial conditions simulation data file is used__)
 - contains the functions to create the input coordinates for QPE, BPE, and BVE units.
 - contains the functions to create the initial/boundary conditions for QPE, BPE, and BVE units.
 ## model.py
-- it is a config file to build and run the model with the  following attributes:
-  - model_type: PINTO/DeepONet using Tensorflow Functional API
-  - data_dir: path to the dataset
-  - batch_size: batch size for training
-  - epochs: number of epochs for training
-  - plot_freq: frequency of plotting the model predictions during training
-  - learning_rate: learning rate for the optimizer
-  - optimizer: optimizer type (Adam, AdamW, etc.)
-  - loss_fn: loss function type (MSE)
-  - lr_Schedule: learning rate schedule type (ExponentialDecay, PolynomialDecay, etc.)
-  - PdeModel: PdeModel class object
-  - wandb: wandb object for logging the training process (True/False)
-  - metrics: metrics to track the training process (MAE)
-  ## Citations
-      @article{boya2024physics,
-      title={A physics-informed transformer neural operator for learning generalized solutions of initial boundary value problems},
-      author={Boya, Sumanth Kumar and Subramani, Deepak},
-      journal={arXiv preprint arXiv:2412.09009},
-      year={2024}} 
+  - it is a config file to build and run the model with the  following attributes:
+    - model_type: PINTO/DeepONet using Tensorflow Functional API
+    - data_dir: path to the dataset
+    - batch_size: batch size for training
+    - epochs: number of epochs for training
+    - plot_freq: frequency of plotting the model predictions during training
+    - learning_rate: learning rate for the optimizer
+    - optimizer: optimizer type (Adam, AdamW, etc.)
+    - loss_fn: loss function type (MSE)
+    - lr_Schedule: learning rate schedule type (ExponentialDecay, PolynomialDecay, etc.)
+    - PdeModel: PdeModel class object
+    - wandb: wandb object for logging the training process (True/False)
+    - metrics: metrics to track the training process (MAE)
+    ## Citations
+        @article{boya2024physics,
+        title={A physics-informed transformer neural operator for learning generalized solutions of initial boundary value problems},
+        author={Boya, Sumanth Kumar and Subramani, Deepak},
+        journal={arXiv preprint arXiv:2412.09009},
+        year={2024}} 
+        
+        @article{boya2025pinto,
+        title={PINTO: Physics-informed transformer neural operator for learning generalized solutions of partial differential equations for any initial and boundary condition},
+        author={Boya, Sumanth Kumar and Subramani, Deepak N},
+        journal={Computer Physics Communications},
+        pages={109702},
+        year={2025},
+        publisher={Elsevier}
+        }
