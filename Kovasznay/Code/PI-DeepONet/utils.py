@@ -38,8 +38,8 @@ def get_ibc_and_inner_data(start, stop, grid_size, domain_samples, seq_len, nue)
     yb = np.vstack((x_top[:, 1:2], x_bottom[:, 1:2], x_left[:, 1:2], x_right[:, 1:2]))
 
     # generating domain samples using LHS
-    lower_bound = grid_loc.min()
-    upper_bound = grid_loc.max()
+    lower_bound = grid_loc.min(0)
+    upper_bound = grid_loc.max(0)
     x_dom = (upper_bound - lower_bound) * lhs(2, domain_samples) + lower_bound
     xd = x_dom[:, 0:1]
     yd = x_dom[:, 1:2]
